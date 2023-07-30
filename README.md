@@ -1,9 +1,9 @@
 # YumHub
-Problem statement
+Problem statement: 
 Recipe Application: Build a recipe application using MERN stack that allows users to
 search for recipes, save their favourite recipes, and share recipes with friends.
 
-Problem Statement Brief
+Problem Statement Brief: 
 Create a recipe application that allows users to easily search for, save, and organise their
 favourite recipes. The app should also provide features for creating and sharing their own
 recipes with the community. Additionally, the application should have a user login feature to
