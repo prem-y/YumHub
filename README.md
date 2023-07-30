@@ -2,12 +2,14 @@
 Problem statement
 Recipe Application: Build a recipe application using MERN stack that allows users to
 search for recipes, save their favourite recipes, and share recipes with friends.
+
 Problem Statement Brief
 Create a recipe application that allows users to easily search for, save, and organise their
 favourite recipes. The app should also provide features for creating and sharing their own
 recipes with the community. Additionally, the application should have a user login feature to
 save user preferences, and allow users to access their saved recipes across multiple
 devices.
+
 Features:
 1. Recipe Search: The app should allow users to search for recipes based on
 keywords, ingredients, cuisine, and dietary restrictions.
