@@ -10,7 +10,9 @@ const Login = () => {
             <span>Login</span>
             <span><Link to={"/"} className='text-decoration-none text-dark'>x</Link></span>
             </div>
+            <div className='text-center'>
             <img src="./assets/email.png" alt="" height={"200em"} style={{}}/>
+            </div>
             <div>
               <label htmlFor="email">Email</label>
             <input type="email" placeholder='Email' className='form-control' />
