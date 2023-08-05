@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from "react-router-dom"
-const Home = () => {
+const Landingpage = () => {
     const h1style={
         position:"absolute",
         top:"50%",
@@ -54,4 +54,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Landingpage;
