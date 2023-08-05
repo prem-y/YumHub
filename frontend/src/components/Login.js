@@ -4,14 +4,14 @@ const Login = () => {
   return (
     <div>
         <div className='d-flex justify-content-center' style={{position:"relative",top:"10em"}}>
-          <div className='border border-3 p-3' style={{width:"25em"}} >
+          <div className='border border-2 rounded p-3 ' style={{width:"25em"}} >
             <form >
             <div className='d-flex justify-content-between h4'>
             <span>Login</span>
             <span><Link to={"/"} className='text-decoration-none text-dark'>x</Link></span>
             </div>
             <div className='text-center'>
-            <img src="./assets/email.png" alt="" height={"200em"} style={{}}/>
+            <img src="./assets/forlogin.jpg" alt="" height={"200em"} style={{}}/>
             </div>
             <div>
               <label htmlFor="email">Email</label>
@@ -23,7 +23,7 @@ const Login = () => {
             className='form-control'/>
             </div>
             <button className='form-control mt-3 btn btn-outline-danger '>Log in</button>
-            <div className='mt-2'>Don't have an account? create one <Link to={"/signup"}>Sign up</Link></div>
+            <div className='mt-2'>Don't have an account? create one <Link to={"/signup"}className='text-decoration-none text-danger'>Sign up</Link></div>
             </form>
           </div>
         </div>
