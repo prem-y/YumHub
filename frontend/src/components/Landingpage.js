@@ -28,7 +28,7 @@ const Landingpage = () => {
   return (
     <>
     <div style={{position:"relative",}}>
-    <img src="./assets/headimg.jpg" alt="" class="img-fluid" style={{filter:"brightness(60%)"}}/>
+    <img src="./assets/headimg.jpg" alt="" class="img-fluid" style={{filter:"brightness(50%)"}}/>
     <h1 style={h1style} className='h1'>YumHub</h1>
     <p style={pstyle} >Embark on a culinary adventure with a treasure trove of exquisite recipes!</p>
     </div>
