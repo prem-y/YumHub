@@ -1,5 +1,10 @@
-import React from 'react'
-import {Link} from "react-router-dom"
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Carousel } from 'react-bootstrap';
+import headimg from '../Images/headimg.jpg';
+import headimg2 from '../Images/headimg2.jpg';
+import headimg3 from '../Images/headimg3.jpg';
+
 const Landingpage = () => {
     const h1style={
         position:"absolute",
@@ -28,7 +33,17 @@ const Landingpage = () => {
   return (
     <>
     <div style={{position:"relative",}}>
-    <img src="./assets/headimg.jpg" alt="" class="img-fluid" style={{filter:"brightness(50%)"}}/>
+    <Carousel className="mt-5" style={{ maxWidth: '1500px', margin: '0 auto', maxHeight: '1500px' }}>
+            <Carousel.Item>
+              <img className="d-block w-100" src={headimg} alt="First slide" style={{ maxHeight: '500px', objectFit: 'cover' }}/>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img className="d-block w-100" src={headimg2} alt="Second slide" style={{ maxHeight: '500px', objectFit: 'cover' }}/>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img className="d-block w-100" src={headimg3} alt="Second slide" style={{ maxHeight: '500px', objectFit: 'cover' }}/>
+            </Carousel.Item>
+          </Carousel>
     <h1 style={h1style} className='h1'>YumHub</h1>
     <p style={pstyle} >Embark on a culinary adventure with a treasure trove of exquisite recipes!</p>
     </div>
@@ -38,10 +53,10 @@ const Landingpage = () => {
             <Link className='nav-link text-white'>About</Link>
           </li>
           <li className='nav-item p-2'>
-            <Link to={'/login'} className='nav-link text-white'>Log in</Link>
+            <Link to={'/login'} className='nav-link text-white'>Login</Link>
           </li>
           <li className='nav-item p-2'>
-            <Link to={'/signup'} className='nav-link text-white'>Sign up</Link>
+            <Link to={'/signup'} className='nav-link text-white'>Signup</Link>
           </li>
         </ul>
     </nav>

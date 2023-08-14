@@ -62,7 +62,7 @@ const SignUp = () => {
   return (
     <>
       <div className='d-flex justify-content-center' style={{position:"relative",top:"10em"}}>
-        <div className='border border-2 rounded p-3' style={{width:"25em"}} >
+        <div className='border border-2 rounded p-3 bg-warning-subtle' style={{width:"25em"}} >
           <form onSubmit={handleSubmit}>
             <div className='d-flex justify-content-between h4'>
               <span>Sign up</span>
