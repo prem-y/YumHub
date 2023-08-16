@@ -33,9 +33,9 @@ const Landingpage = () => {
   return (
     <>
     <div style={{position:"relative",}}>
-    <Carousel className="mt-5" style={{ maxWidth: '1500px', margin: '0 auto', maxHeight: '1500px' }}>
+    <Carousel className="" style={{ maxWidth: '1500px', margin: '0 auto', maxHeight: '1500px'}}>
             <Carousel.Item>
-              <img className="d-block w-100" src={headimg} alt="First slide" style={{ maxHeight: '500px', objectFit: 'cover' }}/>
+              <img className="d-block w-100" src={headimg} alt="First slide" style={{ maxHeight: '500px', objectFit: 'cover'  }}/>
             </Carousel.Item>
             <Carousel.Item>
               <img className="d-block w-100" src={headimg2} alt="Second slide" style={{ maxHeight: '500px', objectFit: 'cover' }}/>
@@ -56,7 +56,7 @@ const Landingpage = () => {
             <Link to={'/login'} className='nav-link text-white'>Login</Link>
           </li>
           <li className='nav-item p-2'>
-            <Link to={'/signup'} className='nav-link text-white'>Signup</Link>
+            <Link to={'/signup'} className='nav-link text-white'>Sign up</Link>
           </li>
         </ul>
     </nav>
