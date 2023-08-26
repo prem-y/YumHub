@@ -24,7 +24,6 @@ const Landingpage = () => {
       justifyContent:"center"
     }
     const navstyle={
-      position:"absolute",
       top:"2.5%",
       left:"75%",
       fontFamily:"'Concert One', cursive",
@@ -32,8 +31,21 @@ const Landingpage = () => {
     }
   return (
     <>
-    <div style={{position:"relative",}}>
-    <Carousel className="" style={{ maxWidth: '1500px', margin: '0 auto', maxHeight: '1500px'}}>
+    <nav className='navbar-expand-lg bg-danger p-2'>
+      <ul style={navstyle} className=' d-flex flex-row justify-content-end list-unstyled '>
+        <li>
+          <Link to={'/about'} className=' text-decoration-none me-3 text-white'>About</Link>
+        </li>
+        <li>
+          <Link to={'/login'} className=' text-decoration-none me-3 text-white'>Login</Link>
+        </li>
+        <li>
+          <Link to={'/signup'} className=' text-decoration-none me-3 text-white'>Signup</Link>
+        </li>
+      </ul>
+    </nav>
+    <div style={{position:"relative"}}>
+    <Carousel className="" style={{ maxWidth: '1500px', maxHeight: '1500px'}}>
             <Carousel.Item>
               <img className="d-block w-100" src={headimg} alt="First slide" style={{ maxHeight: '500px', objectFit: 'cover'  }}/>
             </Carousel.Item>
@@ -47,19 +59,8 @@ const Landingpage = () => {
     <h1 style={h1style} className='h1'>YumHub</h1>
     <p style={pstyle} >Embark on a culinary adventure with a treasure trove of exquisite recipes!</p>
     </div>
-    <nav className='navbar navbar-expand-lg' style={navstyle}>
-        <ul className='navbar-nav'>
-          <li className='nav-item p-2'>
-            <Link className='nav-link text-white'>About</Link>
-          </li>
-          <li className='nav-item p-2'>
-            <Link to={'/login'} className='nav-link text-white'>Login</Link>
-          </li>
-          <li className='nav-item p-2'>
-            <Link to={'/signup'} className='nav-link text-white'>Sign up</Link>
-          </li>
-        </ul>
-    </nav>
+
+    
     <h2 className='text-center pt-2'>Popular recipes of India</h2>
     <p className='p-3 m-3 mt-2  fs-4'>Welcome to our recipe paradise! Discover a delectable world of culinary delights on our recipe website. From mouthwatering main courses to delightful desserts, we've curated a diverse collection of tried-and-tested recipes for every occasion. Whether you're a seasoned chef or a cooking enthusiast, our easy-to-follow recipes will elevate your kitchen adventures. Get ready to tantalize your taste buds and impress your guests with our inspiring dishes. Join us on this gastronomic journey and unleash your inner chef!</p>
     <hr />
