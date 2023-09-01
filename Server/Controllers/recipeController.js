@@ -11,10 +11,18 @@ exports.getAllRecipes = async (req, res) => {
 
 exports.createRecipe = async (req, res) => {
     try {
-        const { img, title, cookingtime, ingredients, information } = req.body;
-        const newRecipe = await Recipe.create({ img, title, cookingtime, ingredients, information });
-        res.status(201).json({ message: "Added a Recipe!", recipe: newRecipe }); // Fix here
+      const { title, cooking_time, ingredients, nutritional_info, image } = req.body;
+      const newRecipe = await Recipe.create({
+        title,
+        cooking_time,
+        ingredients,
+        nutritional_info,
+        image,
+      });
+      res.status(201).json({ message: "Added a Recipe!", recipe: newRecipe });
     } catch (error) {
-        res.status(400).json({ error: 'Invalid data' });
+      const errorMessage = error.errors[0].message;
+      res.status(400).json({ error: errorMessage });
     }
-};
+  };
+  
