@@ -41,8 +41,7 @@ const Home = () => {
                       </li>
                       <li><button className='btn bg-dark text-white'>More info</button></li>
                     </ul>
-                    
-                    
+                  
                   </div>
                 </div>
               </div>
