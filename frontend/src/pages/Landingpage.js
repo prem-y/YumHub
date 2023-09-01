@@ -63,9 +63,7 @@ const Landingpage = () => {
     
     <h2 className='text-center pt-2'>Popular recipes of India</h2>
     <p className='p-3 m-3 mt-2  fs-4'>Welcome to our recipe paradise! Discover a delectable world of culinary delights on our recipe website. From mouthwatering main courses to delightful desserts, we've curated a diverse collection of tried-and-tested recipes for every occasion. Whether you're a seasoned chef or a cooking enthusiast, our easy-to-follow recipes will elevate your kitchen adventures. Get ready to tantalize your taste buds and impress your guests with our inspiring dishes. Join us on this gastronomic journey and unleash your inner chef!</p>
-    <hr />
-    <p className='text-center'>By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies.</p>
-    <p className='text-center mb-5'> All trademarks are properties of their respective owners. 2023-2024 © YumHub™ Ltd. All rights reserved.</p>
+    
     </>
   )
 }
