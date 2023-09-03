@@ -1,5 +1,6 @@
 import React, {useState,useEffect} from 'react';
 import axios from 'axios';
+import {Link} from 'react-router-dom'
 import Header from '../components/Header';
 const Home = () => {
   const [recipes, setRecipes] = useState([]);
@@ -39,7 +40,7 @@ const Home = () => {
                       <span><img src="./assets/clock.png" alt="" height={'50px'} onClick={handleImgClick}/></span>
                       <span className='h4'>{recipe.cooking_time}min</span>
                       </li>
-                      <li><button className='btn bg-dark text-white'>More info</button></li>
+                      <li><Link to={{pathname:`/details/${recipe._id}`}} className='btn bg-dark text-white'>More info</Link></li>
                     </ul>
                   
                   </div>
