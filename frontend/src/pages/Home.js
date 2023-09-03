@@ -8,7 +8,7 @@ const Home = () => {
   })
 
   const fetchRecipes = () =>{
-    axios.get("http://localhost:4000/")
+    axios.get("http://localhost:4000/api/recipes")
     .then((response)=>{
       setRecipes(response.data);
     })
