@@ -6,7 +6,7 @@
 
 const express = require('express');
 const asynchHandler = require('express-async-handler');
-const Book = require('../models/recipeModel');
+const recipe = require('../models/recipeModel');
 const recipeRouter = express.Router();
 
 //Create Book
@@ -15,7 +15,7 @@ recipeRouter.post(
 
   asynchHandler(async (req, res) => {
     try {
-      const book = await Book.create(req.body);
+      const book = await recipe.create(req.body);
       res.status(200);
       res.json(book);
     } catch (error) {
@@ -28,7 +28,7 @@ recipeRouter.post(
 recipeRouter.get(
   '/',
   asynchHandler(async (req, res) => {
-    const books = await Book.find();
+    const books = await recipe.find();
     //Compare password
     if (books) {
       res.status(201);
@@ -46,7 +46,7 @@ recipeRouter.delete(
   '/:id',
   asynchHandler(async (req, res) => {
     try {
-      const book = await Book.findByIdAndDelete(req.params.id);
+      const book = await recipe.findByIdAndDelete(req.params.id);
       res.status(200);
       res.send(book);
     } catch (error) {
@@ -62,7 +62,7 @@ recipeRouter.put(
   '/:id',
   asynchHandler(async (req, res) => {
     try {
-      const book = await Book.findByIdAndUpdate(req.params.id, req.body);
+      const book = await recipe.findByIdAndUpdate(req.params.id, req.body);
       res.status(200);
       res.json(book);
     } catch (error) {
@@ -77,7 +77,7 @@ recipeRouter.get(
   '/:id',
   asynchHandler(async (req, res) => {
     try {
-      const book = await Book.findById(req.params.id);
+      const book = await recipe.findById(req.params.id);
       res.status(200);
       res.send(book);
     } catch (error) {
