@@ -6,6 +6,7 @@ import Signup from "./pages/Signup"
 import Home from "./pages/Home"
 import Footer from "./components/Footer"
 import Details from "./pages/Details"
+import Profile from "./pages/Profile"
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
         <Route path="/signup" element={<Signup/>}/>
         <Route path="/home" element={<Home/>} />
         <Route path="/details/:id" element={<Details/>}/>
+        <Route path="/profile" element={<Profile/>}/>
       </Routes>
       </BrowserRouter>
       <Footer/>
