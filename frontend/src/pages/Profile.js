@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import Footer from '../components/Footer';
-import UserRecipes from '../components/UserRecipes'
+import UserRecipes from '../components/userRecipes';
 const Profile = () => {
   const params = useParams();
   let userId = params.user;
