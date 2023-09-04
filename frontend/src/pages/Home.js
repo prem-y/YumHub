@@ -24,9 +24,6 @@ const Home = () => {
       console.error(error);
     });
   };
-  const handleImgClick = ()=>{
-    
-  }
   return (
     <>
       <Header userId={userId}/>
@@ -41,7 +38,7 @@ const Home = () => {
                     <h3 className="card-title">{recipe.title}</h3>
                     <ul className='d-flex flex-row list-unstyled justify-content-between'>
                       <li>
-                      <span><img src="./assets/clock.png" alt="" height={'50px'} onClick={handleImgClick}/></span>
+                      <span><img src="./assets/clock.png" alt="" height={'50px'}/></span>
                       <span className='h4'>{recipe.cooking_time}min</span>
                       </li>
                       <li><Link to={{pathname:`/details/${userId}/${recipe._id}`}} className='btn bg-dark text-white'>More info</Link></li>
