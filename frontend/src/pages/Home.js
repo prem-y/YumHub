@@ -8,6 +8,7 @@ import { useParams } from 'react-router-dom';
 import Footer from "../components/Footer";
 const Home = () => {
   const [recipes, setRecipes] = useState([]);
+  const [searchQuery, setSearchQuesry] = useState([]);
   useEffect(()=>{
     fetchRecipes();
   })
@@ -15,8 +16,8 @@ const Home = () => {
   const params = useParams();
   let userId = params.user;
 
-  const fetchRecipes = () =>{
-    axios.get("http://localhost:4000/api/recipes")
+  const fetchRecipes =async () =>{
+    axios.get(`http://localhost:4000/api/recipes?title=${searchQuery}`)
     .then((response)=>{
       setRecipes(response.data);
     })
@@ -28,6 +29,17 @@ const Home = () => {
     <>
       <Header userId={userId}/>
       <div className="container mt-5">
+      <form className="d-flex">
+      <input type="search" name="" id="" placeholder="Search for recipes.." className="form-control "
+      onChange={(event)=>{
+        setSearchQuesry(event.target.value);
+      }}/>
+      </form>
+      <br />
+      {
+
+        !recipes?(<p>No recipe found</p>):(
+          <>
         {recipes && (
           <div className="row">
             {recipes.map((recipe) => (
@@ -50,6 +62,9 @@ const Home = () => {
             ))}
           </div>
         )}
+          </>
+        )
+      }
       </div>
       <Footer/>
     </>

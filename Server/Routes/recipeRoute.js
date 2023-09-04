@@ -25,20 +25,20 @@ recipeRouter.post(
   })
 );
 
-recipeRouter.get(
-  '/',
-  asynchHandler(async (req, res) => {
-    const Recipe = await recipe.find();
-    //Compare password
-    if (Recipe) {
-      res.status(201);
-      res.send(Recipe);
-    } else {
-      res.status(401);
-      throw new Error('Server error');
-    }
-  })
-);
+// recipeRouter.get(
+//   '/',
+//   asynchHandler(async (req, res) => {
+//     const Recipe = await recipe.find();
+//     //Compare password
+//     if (Recipe) {
+//       res.status(201);
+//       res.send(Recipe);
+//     } else {
+//       res.status(401);
+//       throw new Error('Server error');
+//     }
+//   })
+// );
 
 //Delete Recipe
 
@@ -104,5 +104,38 @@ recipeRouter.get(
     }
   })
 );
+
+//Search by title
+recipeRouter.get(
+  '/',
+  asynchHandler(async (req, res) => {
+    try {
+      const { title } = req.query;
+      let recipes;
+
+      if (title) {
+        // If a title query parameter is provided, search by title
+        recipes = await recipe.find({
+          title: {
+            $regex: title,
+            $options: 'i',
+          },
+        });
+      } else {
+        // If no title query parameter is provided, fetch all recipes
+        recipes = await recipe.find();
+      }
+
+      if (recipes) {
+        res.status(200).json(recipes);
+      } else {
+        res.status(404).json({ message: 'No recipes found' });
+      }
+    } catch (error) {
+      res.status(500).json({ message: 'Server error' });
+    }
+  })
+);
+
 
 module.exports = { recipeRouter };

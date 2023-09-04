@@ -18,17 +18,6 @@ const Header = ({userId}) => {
             <Link to={'/home'} className="text-decoration-none text-white" style={logo}>YumHub</Link>
             </li>
             <li>
-                <form className="mx-2 d-flex mt-2">
-                        <li>
-                         <input type="search" name="" id="" placeholder="Search for recipes.." className="form-control mt-2"/>
-                        </li>
-                        <li>
-                            <button className="mt-2 mx-2 btn bg-white">Search</button>
-                        </li>
-
-                </form>
-            </li>
-            <li>
             <div className="mt-3 fs-5">
                 <ul className=" d-flex flex-row list-unstyled ">
                     <li className="">
