@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-
+import Footer from '../components/Footer';
+import UserRecipes from '../components/UserRecipes'
 const Profile = () => {
   const params = useParams();
   let userId = params.user;
@@ -140,7 +141,8 @@ const Profile = () => {
         </button>
       </form>
       <hr />
-
+      <UserRecipes/>
+      <Footer/>
     </div>
   );
 };

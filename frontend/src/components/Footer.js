@@ -24,8 +24,7 @@ const Footer = () => {
             </p>
             <div>
                 <img
-                src="./assets/gitimg.png"
-
+                src="../assets/gitimg.png"
                 height="26px"
                 className="m-1 mb-2"
                  />
