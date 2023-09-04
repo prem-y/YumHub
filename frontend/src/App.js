@@ -4,6 +4,7 @@ import Landingpage from "./pages/Landingpage"
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
 import Home from "./pages/Home"
+
 import Footer from "./components/Footer"
 import Details from "./pages/Details"
 import Profile from "./pages/Profile"
@@ -20,7 +21,8 @@ function App() {
         <Route path="/profile/:user" element={<Profile/>}/>
       </Routes>
       </BrowserRouter>
-      <Footer/>
+    
+
     </>
   );
 }

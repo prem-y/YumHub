@@ -5,6 +5,7 @@ import Header from '../components/Header';
 
 import { useParams } from 'react-router-dom';
 
+import Footer from "../components/Footer";
 const Home = () => {
   const [recipes, setRecipes] = useState([]);
   useEffect(()=>{
@@ -53,6 +54,7 @@ const Home = () => {
           </div>
         )}
       </div>
+      <Footer/>
     </>
   )
 }
