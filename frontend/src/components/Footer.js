@@ -30,7 +30,7 @@ const Footer = () => {
                 className="m-1 mb-2"
                  />
               <a
-                  href="https://github.com/Deveesh-Shetty/rudraksh"
+                  href="https://github.com/Prem-rao/YumHub.git"
                   target="_blank"
                   className=""
                 >
