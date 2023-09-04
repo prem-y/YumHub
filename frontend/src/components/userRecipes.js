@@ -36,7 +36,7 @@ const UserRecipes = ({userId}) => {
   return (
     <>
     <div className="container mt-5">
-      <h1>My recipes</h1>
+      <h1 className='text-danger'>My Recipes</h1><br></br>
       {recipes && (
         <div className="row">
           {recipes.map((recipes)=>(

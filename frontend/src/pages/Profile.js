@@ -3,9 +3,11 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import Footer from '../components/Footer';
 import UserRecipes from '../components/userRecipes';
+import '../CSS/Profile.css'; // Import the CSS file
+
 const Profile = () => {
   const params = useParams();
-  let userId = params.user;
+  const userId = params.user;
 
   const [formData, setFormData] = useState({
     title: '',
@@ -13,9 +15,8 @@ const Profile = () => {
     ingredients: '',
     instructions: '',
     nutritional_info: '',
-    cusine_type: '',
+    cuisine_type: '',
     image: '',
-    username: `${userId}`,
   });
 
   const handleSubmit = async (event) => {
@@ -34,9 +35,8 @@ const Profile = () => {
           ingredients: '',
           instructions: '',
           nutritional_info: '',
-          cusine_type: '',
+          cuisine_type: '',
           image: '',
-          username: '',
         });
       } else {
         alert('Recipe creation failed. Please try again.');
@@ -56,94 +56,102 @@ const Profile = () => {
   };
 
   return (
-    <div>
-      {userId}
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label>Title</label>
-          <input
-            type="text"
-            name="title"
-            value={formData.title}
-            onChange={handleChange}
-            required
-          />
-        </div>
+    <>
+    <div className="container">
+     <h1 className='text-danger'>Welcome!!</h1>
+      <div className="form-container">
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label>Title</label>
+            <input
+              type="text"
+              name="title"
+              value={formData.title}
+              onChange={handleChange}
+              required
+              className="form-control"
+            />
+          </div>
 
-        <div className="form-group">
-          <label>Cooking Time</label>
-          <input
-            type="text"
-            name="cooking_time"
-            value={formData.cooking_time}
-            onChange={handleChange}
-            required
-          />
-        </div>
+          <div className="form-group">
+            <label>Cooking Time</label>
+            <input
+              type="text"
+              name="cooking_time"
+              value={formData.cooking_time}
+              onChange={handleChange}
+              required
+              className="form-control"
+            />
+          </div>
 
-        <div className="form-group">
-          <label>Ingredients: </label>
-          <input
-            type="text"
-            name="ingredients"
-            value={formData.ingredients}
-            onChange={handleChange}
-            required
-          />
-        </div>
+          <div className="form-group">
+            <label>Ingredients</label>
+            <textarea
+              name="ingredients"
+              value={formData.ingredients}
+              onChange={handleChange}
+              required
+              className="form-control"
+            />
+          </div>
 
-        <div className="form-group">
-          <label>instructions: </label>
-          <input
-            type="text"
-            name="instructions"
-            value={formData.instructions}
-            onChange={handleChange}
-            required
-          />
-        </div>
+          <div className="form-group">
+            <label>Instructions</label>
+            <textarea
+              name="instructions"
+              value={formData.instructions}
+              onChange={handleChange}
+              required
+              className="form-control"
+            />
+          </div>
 
-        <div className="form-group">
-          <label>Nutritional info: </label>
-          <input
-            type="text"
-            name="nutritional_info"
-            value={formData.nutritional_info}
-            onChange={handleChange}
-            required
-          />
-        </div>
+          <div className="form-group">
+            <label>Nutritional Info</label>
+            <input
+              type="text"
+              name="nutritional_info"
+              value={formData.nutritional_info}
+              onChange={handleChange}
+              required
+              className="form-control"
+            />
+          </div>
 
-        <div className="form-group">
-          <label>Cusine type: </label>
-          <input
-            type="text"
-            name="cusine_type"
-            value={formData.cusine_type}
-            onChange={handleChange}
-            required
-          />
-        </div>
+          <div className="form-group">
+            <label>Cuisine Type</label>
+            <input
+              type="text"
+              name="cuisine_type"
+              value={formData.cuisine_type}
+              onChange={handleChange}
+              required
+              className="form-control"
+            />
+          </div>
 
-        <div className="form-group">
-          <label>Image Link: </label>
-          <input
-            type="text"
-            name="image"
-            value={formData.image}
-            onChange={handleChange}
-            required
-          />
-        </div>
+          <div className="form-group">
+            <label>Image Link</label>
+            <input
+              type="text"
+              name="image"
+              value={formData.image}
+              onChange={handleChange}
+              required
+              className="form-control"
+            />
+          </div>
 
-        <button className="btn btn-primary" type="submit">
-          Create Recipe
-        </button>
-      </form>
-      <hr />
-      <UserRecipes userId={userId}/>
-      <Footer/>
-    </div>
+          <button className="btn btn-danger" type="submit">
+            Create Recipe
+          </button>
+        </form>
+      </div>
+      </div>
+      <UserRecipes userId={userId} />
+      <Footer />
+      </>
   );
 };
 
