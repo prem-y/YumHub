@@ -87,4 +87,22 @@ recipeRouter.get(
   })
 );
 
+recipeRouter.get(
+  '/user/:username',
+  asynchHandler(async (req, res) => {
+    try {
+      const username = req.params.username;
+      const recipes = await recipe.find({ username: username });
+      
+      if (recipes) {
+        res.status(200).json(recipes);
+      } else {
+        res.status(404).json({ message: 'No recipes found for this username' });
+      }
+    } catch (error) {
+      res.status(500).json({ message: 'Server error' });
+    }
+  })
+);
+
 module.exports = { recipeRouter };

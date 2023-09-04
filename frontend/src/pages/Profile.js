@@ -141,7 +141,7 @@ const Profile = () => {
         </button>
       </form>
       <hr />
-      <UserRecipes/>
+      <UserRecipes userId={userId}/>
       <Footer/>
     </div>
   );
