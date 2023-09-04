@@ -4,13 +4,10 @@ import Landingpage from "./pages/Landingpage"
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
 import Home from "./pages/Home"
-<<<<<<< HEAD
 
-=======
 import Footer from "./components/Footer"
 import Details from "./pages/Details"
 import Profile from "./pages/Profile"
->>>>>>> c36694919e4f9f3e5a8c1c14035ee7d7fd9754a0
 function App() {
   return (
     <>
