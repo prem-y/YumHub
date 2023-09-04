@@ -1,9 +1,11 @@
 import React from "react";
+import "../CSS/Footer.css"
 
 const Footer = () => {
 
   return (
     <>
+    <hr/>
       <footer className="py-4">
         <div className="container ">
           <ul className="d-flex justify-content-between list-unstyled">
@@ -21,14 +23,20 @@ const Footer = () => {
               Contribute
             </p>
             <div>
-            <a
+                <img
+                src="./assets/gitimg.png"
+
+                height="26px"
+                className="m-1 mb-2"
+                 />
+              <a
                   href="https://github.com/Deveesh-Shetty/rudraksh"
                   target="_blank"
                   className=""
                 >
-                  {/* img here */}
-                  Github
+                    Github
                 </a>
+                
             </div>
             </li>
           </ul>

@@ -1,6 +1,7 @@
 import React, {useState,useEffect} from 'react';
 import axios from 'axios';
 import Header from '../components/Header';
+import Footer from "../components/Footer";
 const Home = () => {
   const [recipes, setRecipes] = useState([]);
   useEffect(()=>{
@@ -49,6 +50,7 @@ const Home = () => {
           </div>
         )}
       </div>
+      <Footer/>
     </>
   )
 }

@@ -4,7 +4,7 @@ import { Carousel } from 'react-bootstrap';
 import headimg from '../Images/headimg.jpg';
 import headimg2 from '../Images/headimg2.jpg';
 import headimg3 from '../Images/headimg3.jpg';
-
+import Footer from "../components/Footer";
 const Landingpage = () => {
     const h1style={
         position:"absolute",
@@ -63,7 +63,7 @@ const Landingpage = () => {
     
     <h2 className='text-center pt-2'>Popular recipes of India</h2>
     <p className='p-3 m-3 mt-2  fs-4'>Welcome to our recipe paradise! Discover a delectable world of culinary delights on our recipe website. From mouthwatering main courses to delightful desserts, we've curated a diverse collection of tried-and-tested recipes for every occasion. Whether you're a seasoned chef or a cooking enthusiast, our easy-to-follow recipes will elevate your kitchen adventures. Get ready to tantalize your taste buds and impress your guests with our inspiring dishes. Join us on this gastronomic journey and unleash your inner chef!</p>
-    
+    <Footer/>
     </>
   )
 }
