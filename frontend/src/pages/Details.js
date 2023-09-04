@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom';
 const Details = () => {
     const params = useParams();
     let id = params.id;
+    let userId = params.user;
     const [recipeData,setRecipeData] = useState([]);
     useEffect(() => {
         fetchRecipe();
@@ -32,11 +33,10 @@ const Details = () => {
     <nav className='navbar-expand-lg bg-danger p-1'>
         <ul className="d-flex justify-content-between list-unstyled ">
             <li>
-            <Link to={'/home'} className="text-decoration-none text-white" style={logo}>YumHub</Link>
+            <Link to={`/home/${userId}`} className="text-decoration-none text-white" style={logo}>YumHub</Link>
             </li>
-
             <li>
-            <Link to={'/home'} className="btn mt-2 fs-5 me-2 bg-dark text-white">Back</Link>
+              <Link to={`/home/${userId}`} className="btn btn-outline-dark">Back</Link>
             </li>
         </ul>
     </nav>

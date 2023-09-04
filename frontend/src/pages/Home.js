@@ -2,11 +2,17 @@ import React, {useState,useEffect} from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom'
 import Header from '../components/Header';
+
+import { useParams } from 'react-router-dom';
+
 const Home = () => {
   const [recipes, setRecipes] = useState([]);
   useEffect(()=>{
     fetchRecipes();
   })
+
+  const params = useParams();
+  let userId = params.user;
 
   const fetchRecipes = () =>{
     axios.get("http://localhost:4000/api/recipes")
@@ -17,15 +23,12 @@ const Home = () => {
       console.error(error);
     });
   };
-  const moreinfo= ()=>{
-
-  }
   const handleImgClick = ()=>{
     
   }
   return (
     <>
-      <Header/>
+      <Header userId={userId}/>
       <div className="container mt-5">
         {recipes && (
           <div className="row">
@@ -40,7 +43,7 @@ const Home = () => {
                       <span><img src="./assets/clock.png" alt="" height={'50px'} onClick={handleImgClick}/></span>
                       <span className='h4'>{recipe.cooking_time}min</span>
                       </li>
-                      <li><Link to={{pathname:`/details/${recipe._id}`}} className='btn bg-dark text-white'>More info</Link></li>
+                      <li><Link to={{pathname:`/details/${userId}/${recipe._id}`}} className='btn bg-dark text-white'>More info</Link></li>
                     </ul>
                   
                   </div>

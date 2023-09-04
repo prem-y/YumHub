@@ -9,15 +9,15 @@ const asynchHandler = require('express-async-handler');
 const recipe = require('../models/recipeModel');
 const recipeRouter = express.Router();
 
-//Create Book
+//Create Recipe
 recipeRouter.post(
   '/',
 
   asynchHandler(async (req, res) => {
     try {
-      const book = await recipe.create(req.body);
+      const Recipe = await recipe.create(req.body);
       res.status(200);
-      res.json(book);
+      res.json(Recipe);
     } catch (error) {
       res.status(500);
       throw new Error(error);
@@ -28,11 +28,11 @@ recipeRouter.post(
 recipeRouter.get(
   '/',
   asynchHandler(async (req, res) => {
-    const books = await recipe.find();
+    const Recipe = await recipe.find();
     //Compare password
-    if (books) {
+    if (Recipe) {
       res.status(201);
-      res.send(books);
+      res.send(Recipe);
     } else {
       res.status(401);
       throw new Error('Server error');
@@ -40,15 +40,15 @@ recipeRouter.get(
   })
 );
 
-//Delete book
+//Delete Recipe
 
 recipeRouter.delete(
   '/:id',
   asynchHandler(async (req, res) => {
     try {
-      const book = await recipe.findByIdAndDelete(req.params.id);
+      const Recipe = await recipe.findByIdAndDelete(req.params.id);
       res.status(200);
-      res.send(book);
+      res.send(Recipe);
     } catch (error) {
       res.status(500);
       throw new Error('Server Error');
@@ -62,9 +62,9 @@ recipeRouter.put(
   '/:id',
   asynchHandler(async (req, res) => {
     try {
-      const book = await recipe.findByIdAndUpdate(req.params.id, req.body);
+      const Recipe = await recipe.findByIdAndUpdate(req.params.id, req.body);
       res.status(200);
-      res.json(book);
+      res.json(Recipe);
     } catch (error) {
       res.status(500);
       throw new Error('Update failed');
@@ -77,12 +77,12 @@ recipeRouter.get(
   '/:id',
   asynchHandler(async (req, res) => {
     try {
-      const book = await recipe.findById(req.params.id);
+      const Recipe = await recipe.findById(req.params.id);
       res.status(200);
-      res.send(book);
+      res.send(Recipe);
     } catch (error) {
       res.status(500);
-      throw new Error('No book found');
+      throw new Error('No Recipe found');
     }
   })
 );

@@ -44,7 +44,7 @@ const Login = () => {
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          navigate("/home");
+          navigate(`/home/${inputValue.email}`);
         }, 1000);
       } else {
         handleError(message);
@@ -87,5 +87,6 @@ const Login = () => {
     </div>
   );
 };
+
 
 export default Login;

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import {Link} from 'react-router-dom';
 
-const Header = () => {
-  const [searchTerm, setSearchTerm] = useState("");
+const Header = ({userId}) => {
     const logo ={
         fontFamily:"'Concert One', cursive",
         fontSize: "2em",
@@ -12,6 +11,7 @@ const Header = () => {
     }
   return (
     <>
+
     <nav className='navbar-expand-lg bg-danger p-1'>
         <ul className="d-flex justify-content-between list-unstyled ">
             <li>
@@ -38,7 +38,7 @@ const Header = () => {
                     <Link to={'/non-veg'} className="text-decoration-none m-3 text-white">Non-Veg</Link>
                     </li>
                     <li>
-                    <Link to={'/myprofile'} className="text-decoration-none m-3 text-white">My Profile</Link> 
+                    <Link to={`/profile/${userId}`} className="text-decoration-none m-3 text-white">My Profile</Link> 
                     </li>
                 </ul>
             </div>
