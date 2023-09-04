@@ -3,7 +3,8 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import Footer from '../components/Footer';
 import UserRecipes from '../components/userRecipes';
-import '../CSS/Profile.css'; // Import the CSS file
+import '../CSS/Profile.css';
+import Header from '../components/Header';
 
 const Profile = () => {
   const params = useParams();
@@ -57,6 +58,7 @@ const Profile = () => {
 
   return (
     <>
+    <Header userId={userId}/>
     <div className="container">
      <h1 className='text-danger'>Welcome!!</h1>
       <div className="form-container">

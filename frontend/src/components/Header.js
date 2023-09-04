@@ -15,7 +15,7 @@ const Header = ({userId}) => {
     <nav className='navbar-expand-lg bg-danger p-1'>
         <ul className="d-flex justify-content-between list-unstyled ">
             <li>
-            <Link to={'/home'} className="text-decoration-none text-white" style={logo}>YumHub</Link>
+            <Link to={'/'} className="text-decoration-none text-white" style={logo}>YumHub</Link>
             </li>
             <li>
             <div className="mt-3 fs-5">

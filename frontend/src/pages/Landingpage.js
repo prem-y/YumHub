@@ -29,20 +29,36 @@ const Landingpage = () => {
       fontFamily:"'Concert One', cursive",
       fontSize: "1.5em",
     }
+    const logo ={
+      fontFamily:"'Concert One', cursive",
+      fontSize: "2em",
+      position:"relative",
+      top:"0.2em",
+      left:"0.3em"
+  }
   return (
     <>
-    <nav className='navbar-expand-lg bg-danger p-2'>
-      <ul style={navstyle} className=' d-flex flex-row justify-content-end list-unstyled '>
-        <li>
-          <Link to={'/about'} className=' text-decoration-none me-3 text-white'>About</Link>
-        </li>
-        <li>
-          <Link to={'/login'} className=' text-decoration-none me-3 text-white'>Login</Link>
-        </li>
-        <li>
-          <Link to={'/signup'} className=' text-decoration-none me-3 text-white'>Signup</Link>
-        </li>
-      </ul>
+    <nav className='navbar-expand-lg bg-danger p-1'>
+        <ul className="d-flex justify-content-between list-unstyled ">
+            <li>
+            <Link to={'/'} className="text-decoration-none text-white" style={logo}>YumHub</Link>
+            </li>
+            <li>
+            <div className="mt-3 fs-5">
+                <ul className=" d-flex flex-row list-unstyled ">
+                <li>
+                  <Link to={'/about'} className=' text-decoration-none me-3 text-white'>About</Link>
+                </li>
+                <li>
+                  <Link to={'/login'} className=' text-decoration-none me-3 text-white'>Login</Link>
+                </li>
+                <li>
+                  <Link to={'/signup'} className=' text-decoration-none me-3 text-white'>Signup</Link>
+                </li>
+                </ul>
+            </div>
+            </li>
+        </ul>
     </nav>
     <div style={{position:"relative"}}>
     <Carousel className="" style={{ maxWidth: '1500px', maxHeight: '1500px'}}>
