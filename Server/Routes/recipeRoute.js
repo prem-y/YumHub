@@ -1,9 +1,3 @@
-// const jwt = require('jsonwebtoken');
-// const authMiddlware = require('../middlewares/authMiddleware');
-// const User = require('../models/User');
-// const authTokenGenerator = require('../utils/authTokenGenerator');
-
-
 const express = require('express');
 const asynchHandler = require('express-async-handler');
 const recipe = require('../models/recipeModel');
@@ -24,21 +18,6 @@ recipeRouter.post(
     }
   })
 );
-
-// recipeRouter.get(
-//   '/',
-//   asynchHandler(async (req, res) => {
-//     const Recipe = await recipe.find();
-//     //Compare password
-//     if (Recipe) {
-//       res.status(201);
-//       res.send(Recipe);
-//     } else {
-//       res.status(401);
-//       throw new Error('Server error');
-//     }
-//   })
-// );
 
 //Delete Recipe
 
@@ -72,7 +51,7 @@ recipeRouter.put(
   })
 );
 
-//find a book
+//find a recipe
 recipeRouter.get(
   '/:id',
   asynchHandler(async (req, res) => {
