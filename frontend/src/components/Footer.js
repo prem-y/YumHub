@@ -12,7 +12,7 @@ const Footer = () => {
             <li>
             <h1>YumHub</h1>
             <p>
-              Blending Tech with Nature's Essence, Unveiling Plant Health
+            Discover delicious recipes that will satisfy your taste buds and inspire your culinary adventures.
             </p>
             </li>
             <li>
