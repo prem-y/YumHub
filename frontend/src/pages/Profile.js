@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import Footer from '../components/Footer';
 import UserRecipes from '../components/userRecipes';
+import {Link} from 'react-router-dom';
 import '../CSS/Profile.css'; // Import the CSS file
 
 const Profile = () => {
@@ -17,6 +18,7 @@ const Profile = () => {
     nutritional_info: '',
     cuisine_type: '',
     image: '',
+    username: `${userId}`,
   });
 
   const handleSubmit = async (event) => {
@@ -37,6 +39,7 @@ const Profile = () => {
           nutritional_info: '',
           cuisine_type: '',
           image: '',
+          username: `${userId}`,
         });
       } else {
         alert('Recipe creation failed. Please try again.');
@@ -54,9 +57,38 @@ const Profile = () => {
       [name]: value,
     });
   };
+  const logo ={
+    fontFamily:"'Concert One', cursive",
+    fontSize: "2em",
+    position:"relative",
+    top:"0.2em",
+    left:"0.3em"
+  }
 
   return (
     <>
+    <nav className='navbar-expand-lg bg-danger p-1'>
+        <ul className="d-flex justify-content-between list-unstyled ">
+            <li>
+            <Link to={'/home'} className="text-decoration-none text-white" style={logo}>YumHub</Link>
+            </li>
+            <li>
+            <div className="mt-3 fs-5">
+                <ul className=" d-flex flex-row list-unstyled ">
+                    <li className="">
+                    <Link to={'veg'} className="text-decoration-none m-3 text-white">Veg</Link>
+                    </li>
+                    <li>
+                    <Link to={`/home/${userId}`} className="text-decoration-none m-3 text-white">Home</Link>
+                    </li>
+                    <li>
+                    <Link to={`/`} className="btn btn-dark text-white fs-6 me-2">Log out</Link> 
+                    </li>
+                </ul>
+            </div>
+            </li>
+        </ul>
+    </nav>
     <div className="container">
      <h1 className='text-danger'>Welcome!!</h1>
       <div className="form-container">
