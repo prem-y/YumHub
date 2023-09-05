@@ -4,7 +4,7 @@ import Landingpage from "./pages/Landingpage"
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
 import Home from "./pages/Home"
-
+import About from "./pages/About"
 import Footer from "./components/Footer"
 import Details from "./pages/Details"
 import Profile from "./pages/Profile"
@@ -15,14 +15,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Landingpage/>}/>
         <Route path="/login" element={<Login/>} />
+        <Route path="/about" element={<About/>} />
         <Route path="/signup" element={<Signup/>}/>
         <Route path="/home/:user" element={<Home/>} />
         <Route path="/details/:user/:id" element={<Details/>}/>
         <Route path="/profile/:user" element={<Profile/>}/>
       </Routes>
       </BrowserRouter>
-    
-
     </>
   );
 }

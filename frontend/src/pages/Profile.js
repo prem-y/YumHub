@@ -3,8 +3,13 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import Footer from '../components/Footer';
 import UserRecipes from '../components/userRecipes';
+<<<<<<< HEAD
 import {Link} from 'react-router-dom';
 import '../CSS/Profile.css'; // Import the CSS file
+=======
+import '../CSS/Profile.css';
+import Header from '../components/Header';
+>>>>>>> c8dc845d9e27af7eda630a000bea61c57d18c9a4
 
 const Profile = () => {
   const params = useParams();
