@@ -46,7 +46,7 @@ const Home = () => {
             value={searchQuery} // Add value attribute to input field
             onChange={(e) => setSearchQuery(e.target.value)} // Update searchQuery state
           />
-          <button type="submit">Search</button> 
+          <button type="submit" className='btn btn-outline-dark'>Search</button> 
         </form>
         <br />
         {!recipes?(
